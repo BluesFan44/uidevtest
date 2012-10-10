@@ -15,7 +15,7 @@ function showStory(intStory) {
 			var theStory=json.objects[intStory];
 			$('#title').text(theStory['title']);
 			var categories=theStory['categories_name'];
-			$('#categories_name').text(categories.toString().replace(',', ' / '));
+			$('#categories').text(categories.toString().replace(',', ' / '));
 			$('.dtPosted').text(parseXMLDateToTime(theStory['pub_date']));
 			$('.dtUpdated').text(parseXMLDateToTime(theStory['updated']));
 			$('#author').text(theStory['author']);

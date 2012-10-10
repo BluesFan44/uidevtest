@@ -10,7 +10,7 @@
 <!-- Build list of links on the fly while looping through the JSON Onject anyway -->
 <div class="clsLinkList" id="divLinkList"></div>
 <!-- placeholders for Story layout items -->
-<div class="clsStory narrow"><a href="index.html">Home</a> &gt; <span class="clsStory" id="categories_name">categories_name</span></div>
+<div class="clsStory breadcrumbs"><a href="index.html">Home</a> &gt; <a href="#" id="categories">categories_name</a></div>
 <div class="clsStory narrow dates">Updated:<span class="dtUpdated">dtUpdated</span> | Posted:<span class="dtPosted">dtPosted</span></div>
 </div>
 <div class="clsStory" id="title">title</div>
@@ -20,11 +20,13 @@
   <a href="#" class="spnSprite"><div id="sprite"><img class="share" src="../images/uidevtest-sprites.png" alt="Share"></div>Share</a>
   <a href="#" class="spnSprite"><div id="sprite"><img class="favorite" src="../images/uidevtest-sprites.png" alt="Comment"></div>Favorite</a>
   <a href="#" class="spnSprite"><div id="sprite"><img class="vote" src="../images/uidevtest-sprites.png" alt="Vote"></div>Vote</a>
+  <p />
 </div>
-<div class="clsStory" id="photoBox"><img id="photo" />
-  <div class="clsStory" id="photoCredit"></div>
-  <div class="clsStory" id="photoCaption"></div>
-</div>
+<span class="clsStory" id="photoBox"><img id="photo" /><br />
+  <span class="clsStory" id="photoCredit"></span><br class="narrow" />
+  <span class="clsStory" id="photoCaption"></span>
+</span>
+
 <div class="clsStory" id="content">
   <div class="clsStory wide" id="divLinks"> 
   <a href="#" class="spnSprite"><div id="sprite"><img class="comment" src="../images/uidevtest-sprites.png" alt="Comment"></div>Comment</a> 

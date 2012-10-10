@@ -1,9 +1,107 @@
-@media screen and (min-width: 480px) {
-.story {
-	font-weight:bold;
+body {
+	font-family:"Arial", Verdana, sans-serif;
+}
+.clsStory {
+}
+.clsLinkedList {
+}
+.spnSprite {
+	margin-right:10px;
+}
+.listItem {
+	margin-bottom:15px;
+	position:relative;
+	clear:both;
+}
+.spnMiddle {
+	display:block;
+	vertical-align:bottom;
+	height:110px;
+	padding-top:6px;
+}
+#sprite img.comment {
+	position:absolute;
+	left:0px;
+	margin-top:3px;
+}
+#sprite img.share {
+	position:absolute;
+	left:-20px;
+	margin-top:3px;
+}
+#sprite img.favorite {
+	position:absolute;
+	left:-40px;
+	margin-top:3px;
+}
+#sprite img.vote {
+	position:absolute;
+	left:-60px;
+	margin-top:3px;
+}
+#sprite {
+	display:inline-block;
+	overflow:hidden; /* this is important */
+	position:relative; /* this is important too */
+	width:20px;
+	height:23px;
+}
+.img_thumb {
+	border:3px solid white;
+	float:left;
+	text-shadow:#999;
+}
+ @media screen and (min-width: 480px) {
+.narrow {
+display:none;
+}
+#content {
+ margin-left:270px;
+ width:400px;
+}
+ #story {
  column-count:2;
  -moz-column-count:2;
  -webkit-column-count:2;
  -ms-column-count:2;
+}
+#photoBox {
+float:left;
+}
+ #photo {
+}
+ #sprite img {
+display:none;
+Eliminate the brief popping of color version on page load
+}
+ #photoCredit {
+text-align:right
+}
+ .clsStory {
+ margin-right:15px;
+}
+}
+@media screen and (max-width: 480px) {
+#story {
+ column-count:1;
+ -moz-column-count:1;
+ -webkit-column-count:1;
+ -ms-column-count:1;
+}
+.wide {
+display:none;
+}
+}
+.dates {
+	font-style:italic;
+}
+#story p:first-child {
+	margin-top:0px;
+}
+#title {
+	font-size:28px;
+}
+#photoBox {
+	width:auto;
 }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <script src="../js/jquery-1.8.0.min.js"></script>
-<script src="../js/date.js"></script>
+<script src="../js/date.js"></script> <!-- assists with conversion of date/time objects -->
 <script src="../js/my_scripts.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/uidevtest.css">
 <title>Cox Media Group -- UI Development Test</title>
@@ -11,10 +11,13 @@
 <div class="clsLinkList" id="divLinkList"></div>
 <!-- placeholders for Story layout items -->
 <div class="clsStory breadcrumbs"><a href="index.html">Home</a> &gt; <a href="#" id="categories">categories_name</a></div>
+<!-- Dates for Narrow Version -->
 <div class="clsStory narrow dates">Updated:<span class="dtUpdated">dtUpdated</span> | Posted:<span class="dtPosted">dtPosted</span></div>
 </div>
 <div class="clsStory" id="title">title</div>
+<!-- Dates for Wide Version -->
 <div class="clsStory wide dates">Updated:<span class="dtUpdated">dtUpdated</span> | Posted:<span class="dtPosted">dtPosted</span></div>
+<!--Sprite links for the Narrow version of the page, since they appear in a different place -->
 <div class="clsStory narrow" id="divLinks">
   <a href="#" class="spnSprite"><div id="sprite"><img class="comment" src="../images/uidevtest-sprites.png" alt="Comment"></div>Comment</a> 
   <a href="#" class="spnSprite"><div id="sprite"><img class="share" src="../images/uidevtest-sprites.png" alt="Share"></div>Share</a>
@@ -28,6 +31,7 @@
 </span>
 
 <div class="clsStory" id="content">
+<!--Sprite links for the Wide version of the page -->
   <div class="clsStory wide" id="divLinks"> 
   <a href="#" class="spnSprite"><div id="sprite"><img class="comment" src="../images/uidevtest-sprites.png" alt="Comment"></div>Comment</a> 
   <a href="#" class="spnSprite"><div id="sprite"><img class="share" src="../images/uidevtest-sprites.png" alt="Share"></div>Share</a>

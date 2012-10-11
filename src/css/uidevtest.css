@@ -1,3 +1,11 @@
+/*
+
+Main CSS for Cox Media Group UI Code Test
+Brent Bollmeier
+10/11/2012
+
+*/
+
 body {
 	font-family:"Arial", Verdana, sans-serif;
 	font-size:12px;
@@ -43,8 +51,8 @@ body {
 }
 #sprite {
 	display:inline-block;
-	overflow:hidden; /* this is important */
-	position:relative; /* this is important too */
+	overflow:hidden;
+	position:relative;
 	width:20px;
 	height:25px;
 }
@@ -97,6 +105,8 @@ a {
 	line-height:14px;
 	color:#444444;
 }
+
+/* Wide version of page */
 @media screen and (min-width: 480px) {
 	.narrow {
 	display:none;
@@ -125,7 +135,7 @@ a {
 	}
 	
 	#sprite img {
-	display:none; /*Eliminate the brief popping of color version on page load */
+	display:none; /*Eliminate the brief popping of color version on page load.  Set Display in onLoad. */
 	}
 	
 	#photoCredit {
@@ -144,6 +154,8 @@ a {
 	 margin-top:0px;
 	}
 }
+
+/* Narrow version */
 @media screen and (max-width: 480px) {
 	#story {
 	 column-count:1;

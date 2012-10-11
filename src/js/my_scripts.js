@@ -1,15 +1,16 @@
-var FADE_DELAY=100;
+var FADE_DELAY=100; // .01 second fadeIn/FadeOut of grayscale-to-color sprites on mouseOver
 
+// If we have a storyID in the querysting, show that story.  Otherwise show the list of links
 $(document).ready(function(){
 var regExPattern=/\?story=sto\d\d$/;
 if (regExPattern.test(location.href)) {
-  showStory(parseInt(/\d\d/.exec(location.href)) - 1); }
+  showStory(parseInt(/\d\d/.exec(location.href)) - 1); } // - 1 for 0-based array
   else
   { showLinkList(); }
 });
 
-function showStory(intStory) {
-	$.getJSON('../js/uidevtest-data.js', function(json) {
+function showStory(intStory) { // Grab the correct JSON item, and replace tghe items in the HTML file template
+	$.getJSON('../js/uidevtest-data.js', function(json) { 
 			if (intStory < json.objects.length) {
 			$('.clsLinkList').hide();
 			var theStory=json.objects[intStory];
@@ -32,7 +33,7 @@ function showStory(intStory) {
 		});
 }
 
-function showLinkList() {
+function showLinkList() { // We have to loop through the entire JSON object anyway, so may as well just build the page in JavaScript
 	$.getJSON('../js/uidevtest-data.js', function(json) {
 			if (json.objects.length > 0) {
 		$('.clsStory').hide();
@@ -52,13 +53,9 @@ function showLinkList() {
 		});
 }
 
-
-
-
-
 jQuery.fn.exists = function(){return this.length>0;}
 
-function parseXMLDateToTime (str) {
+function parseXMLDateToTime (str) { // parses the dates in the JSON file into a readable format.
 	dt=new Date();
 	var strDate = getDateFromFormat(str.substring(0,19), "yyyy-MM-ddTHH:mm:ss");
 	dt.setTime(strDate);
@@ -67,7 +64,7 @@ function parseXMLDateToTime (str) {
 	return tm;
 }
 
-// The following code credited to http://webdesignerwall.com/tutorials/html5-grayscale-image-hover
+// The following two functions credited to http://webdesignerwall.com/tutorials/html5-grayscale-image-hover
 
 	$(window).load(function(){
 		
@@ -86,10 +83,11 @@ function parseXMLDateToTime (str) {
 			
 		});
 		$(".wide #sprite img").show();
-		// Fade image 
+		// Fade image to color on mouseOver either the sprite itself, or its corresponding link.
 		$('.wide .spnSprite').mouseover(function(){
 			$(this).find('img:first').stop().animate({opacity:1}, FADE_DELAY);
-		})
+		}) 
+		// Return to greyscale on mouseOut
 		$('.wide .spnSprite').mouseout(function(){
 			$(this).find('img:first').stop().animate({opacity:0}, FADE_DELAY);
 		});		
